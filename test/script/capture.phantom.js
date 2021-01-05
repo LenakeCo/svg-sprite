@@ -13,6 +13,12 @@ if (system.args.length !== 3) {
 		width			: 1280,
 		height			: 1024
 	};
+	page.clipRect = {
+		top: 0,
+		left: 0,
+		width: 1280,
+		height: 1024
+	};
 	page.open('file://' + system.args[1], function(status) {
 		page.render(system.args[2], {format: 'png', quality: 100});
 		console.log(status);
